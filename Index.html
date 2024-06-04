@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café del Día</title>
+    <link rel="stylesheet" href="Inicio.css">
+</head>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: tan;
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    height: 100%;
+}
+
+.sidebar {
+    background-color: black;
+    color: #fff;
+    width: 200px;
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.sidebar .menu {
+    padding: 0;
+    list-style-type: none;
+    margin: 20px 0;
+}
+
+.sidebar .menu li {
+    padding: 10px 20px;
+}
+
+.sidebar .menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+.team-member {
+    background-color: #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+}
+
+p {
+  color: #333;
+}
+
+</style>
+<body>
+    <div class="wrapper">
+        <nav class="sidebar">
+            <ul class="menu">
+                <li><a href="#" onclick="showSection('home')">Inicio</a></li>
+                <li><a href="Informacion.html" onclick="showSection('info')">Información</a></li>
+                <li><a href="Integrantes.html" onclick="showSection('team')">Integrantes</a></li>
+                <li><a href="Carrito.html" onclick="showSection('team')">Carrito</a></li>
+                <img src="Cafe Del Dia.jpg" width="150" height="150">
+            </ul>
+        </nav>
+        <main class="content">
+            <header>
+                <h1>Bienvenidos a Primero Cafe</h1>
+                <p>El mejor lugar para disfrutar de un buen café</p>
+            </header>
+            <section id="home" class="section active">
+                <h2>Inicio</h2>
+                <p>Bienvenidos a nuestro café. Aquí encontrarás el mejor café de la ciudad y un ambiente acogedor para disfrutarlo.</p>
+            </section>
+            <section id="home" class="section active">
+              <h2>Pequeña Informacion</h2>
+              <p>Hola Mi nombre es Kevin. Este es un proyecto para la prepa Cecyte y hablare un poco sobre el cafe</p>
+              <p>El Cafe es algo "diario" que tomamos ya sea para despertar por la cafeina o simplemente hace frio y tomamos un cafe con galletas</p>
+              <p>Yo me despido toda la informacion estara clickeando en Informacion</p>
+            </section>
+            <center>
+              <a class="Back-button">
+                <img src="cafe.png" alt="coffee" width="150" height="150"
+                </a>
+            </center>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
